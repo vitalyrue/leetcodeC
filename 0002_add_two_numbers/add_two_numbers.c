@@ -1,3 +1,11 @@
+
+/*
+This code implements a solution for adding two numbers represented as singly linked lists, where each node contains a single digit. 
+The digits are stored in reverse order, so the least significant digit comes first. 
+The result is stored in a new linked list, also in reverse order.
+*/
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -9,6 +17,8 @@ struct ListNode {
     struct ListNode *next;
 };
 
+
+/* adds */
 struct ListNode* addTwoNumbers(struct ListNode* l1, struct ListNode* l2)
 {
     int carry = 0;
@@ -50,6 +60,7 @@ struct ListNode* addTwoNumbers(struct ListNode* l1, struct ListNode* l2)
     
     return dummy.next;
 }
+
 
 static struct ListNode *node_build(const char *digits)
 {
